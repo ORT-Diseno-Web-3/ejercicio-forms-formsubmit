@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+:root {
+    --primario: rgb(232, 83, 83);
+    accent-color: var(--primario);
+}   
+
+body {
+    font-family: "Poppins";
+}
+
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+form {
+    padding: 3rem 2rem;
+    border: 1px solid #eee;
+    margin-top: 3rem;
+    border-radius: 12px;
+}
+
+label {
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+input,
+select,
+textarea {
+    margin-bottom: 1.5rem;
+    padding: 12px;
+    border: none;
+    border: 1px solid #ccc;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    padding: 16px 24px;
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+}
+legend {
+    display: block;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-inline: auto;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+}
+
+.botones-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+form button {
+    padding: 12px;
+    border: 1px solid #1e1e1e;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+form button[type="submit"], .boton {
+    background-color: #1e1e1e;
+    color: #fff;
+    transition: all 0.2s;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 100px;
+    border: none;
+    font-family: inherit;
+    display: inline-block;
+    text-decoration: none;
+}
+
+form button[type="submit"]:hover, .boton:hover {
+    background-color: var(--primario);
+}
+
+input[type="radio"] + label {
+    margin-left: 4px;
+    margin-right: 16px;
+}
+
+.dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+header {
+    padding: 40px;
+    background-color: var(--primario);
+    color: white;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+input:checked + label {
+    color: tomato;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.gracias p {
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 767px) {
+    header {
+        margin-bottom: 24px;
+    }
+    .dos-columnas {
+        grid-template-columns: 1fr;
+    }
+    .form-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
